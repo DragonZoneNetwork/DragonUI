@@ -1,0 +1,207 @@
+.input-group {
+  width: 100%;
+}
+
+.input-field {
+
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  margin: 5px;
+
+  i.prefix {
+    display: inline-block;
+    position: absolute;
+    top:2px;
+    left: 5px;
+    font-size: 18pt;
+  }
+
+  i.prefix + input {
+    text-indent: 35px;
+  }
+
+  input {
+    outline: none;
+    border: #d9d9d9 1px solid;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    font-size: 10pt;
+    text-indent: 5px;
+    transition: border 0.3s ease, color 0.3s ease;
+    color: #424242;
+
+
+    &::-webkit-input-placeholder {
+      transition: border 0.3s ease, color 0.3s ease;
+    }
+
+    &::-moz-placeholder {
+      transition: border 0.3s ease, color 0.3s ease;
+    }
+
+    &:-moz-placeholder {
+      transition: border 0.3s ease, color 0.3s ease;
+    }
+
+    &:-ms-input-placeholder {
+      transition: border 0.3s ease, color 0.3s ease;
+    }
+
+    &:focus, &:valid {
+      border: $borderColor 1px solid;
+
+      &::-webkit-input-placeholder {
+        color: $borderColor;
+      }
+
+      &::-moz-placeholder {
+        color: $borderColor;
+      }
+
+      &:-moz-placeholder {
+        color: $borderColor;
+      }
+
+      &:-ms-input-placeholder {
+        color: $borderColor;
+      }
+
+    }
+
+  }
+
+  button {
+    border-radius: 5px;
+    font-size: 10pt;
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    color: $borderColor;
+    border: $borderColor solid 1px;
+    cursor: pointer;
+    transition: color 0.3s ease, background 0.3s ease;
+
+    &:hover {
+      background: $borderColor;
+      color: white;
+    }
+
+    &.success {
+      background: $borderColor;
+      color: white;
+    }
+
+  }
+
+  label.checkbox {
+
+    display: flex;
+
+    input {
+      display: none;
+
+      & + span:before {
+        content: ' ';
+        color: transparent;
+        height: 10px;
+        width: 10px;
+        display: inline-block;
+        border-radius: 2px;
+        position: absolute;
+        top:2.5px;
+        left: 2.5px;
+        transition: background 0.3s ease;
+      }
+
+      &:checked + span {
+        border: 2px solid $borderColor;
+      }
+
+      &:checked + span:before {
+        background: $borderColor;
+      }
+
+    }
+
+    span {
+      height: 15px;
+      width: 15px;
+      display: inline-block;
+      border: 2px solid $formBorderColor;
+      border-radius: 4px;
+      position: relative;
+      transition: border 0.3s ease;
+    }
+
+    p{
+      height: 100%;
+      color: $formTextColor;
+      margin-left: 5px;
+    }
+
+
+  }
+
+  label.radio {
+
+    display: flex;
+
+    input {
+      display: none;
+
+      & + span:before {
+        content: ' ';
+        color: transparent;
+        height: 10px;
+        width: 10px;
+        display: inline-block;
+        border-radius: 10px;
+        position: absolute;
+        top:2.5px;
+        left: 2.5px;
+        transition: background 0.3s ease;
+      }
+
+      &:checked + span {
+        border: 2px solid $borderColor;
+      }
+
+      &:checked + span:before {
+        background: $borderColor;
+      }
+
+    }
+
+    span {
+      height: 15px;
+      width: 15px;
+      display: inline-block;
+      border: 2px solid $formBorderColor;
+      border-radius: 40px;
+      position: relative;
+      transition: border 0.3s ease;
+    }
+
+    p{
+      height: 100%;
+      color: $formTextColor;
+      margin-left: 5px;
+    }
+
+
+  }
+
+  select {
+    border: 1px $formBorderColor solid;
+    border-radius: 4px;
+    height: 30px;
+    width: 100%;
+
+    option {
+      height: 20px;
+    }
+  }
+
+}
